@@ -248,3 +248,105 @@ namespace Exercises
 }
 ** output **
 ![image](https://user-images.githubusercontent.com/98141713/152290932-fdff9ca7-0b2b-4f13-9c43-31375a94caae.png)
+
+
+
+**6. Delegates **
+
+using System;
+namespace Exercises
+{
+    class Delegates
+    {
+        delegate string UppercaseDelegate(string input);
+        static string UppercaseFirst(string input)
+        {
+        char[]buffer = input.ToCharArray();
+        buffer[0] = char.ToUpper(buffer[0]);
+        return new string (buffer);
+       }
+    static string UppercaseLast(string input)
+    {
+        char[] buffer = input.ToCharArray();
+        buffer[buffer.Length - 1] = char.ToUpper(buffer[buffer.Length - 1]);
+        return new string(buffer);
+    }
+    static string UppercaseAll(string input)
+    {
+        return input.ToUpper();
+
+    }
+    static void WriteOutput(string input,UppercaseDelegate del)
+    {
+        Console.WriteLine("Input String:{0}",input);
+        Console.WriteLine("Output String:{0}", del(input));
+
+       
+    }
+    static void Main()
+    {
+        WriteOutput("tom",new UppercaseDelegate(UppercaseFirst));
+        WriteOutput("tom",new UppercaseDelegate(UppercaseLast));
+        WriteOutput("tom",new UppercaseDelegate(UppercaseAll));
+        Console.ReadLine();
+
+    }
+   }
+
+}
+**output**
+![image](https://user-images.githubusercontent.com/98141713/152299966-d3fc2e0e-a61a-484d-b050-033161f5f30f.png)
+
+
+**%.Boxes **
+using System;
+namespace Exercises
+{
+    class Box
+    {
+        float width;
+        float height;
+        float length;
+
+        public float volume
+        {
+            get { return width * height * length; }
+        }
+
+        public Box(float width, float height, float length)
+        {
+            this.width = width;
+            this.height = height;
+            this.length = length;
+
+        }
+        public static float operator +(Box box1, Box box2)
+        {
+            return box1.volume + box2.volume;
+        }
+        public override string ToString()
+
+        {
+            return "box with width " + width + ",height " + height + ",length " + length;
+        }
+    }
+    class operatorOverloading
+    {
+        public static void Main()
+        {
+            Box box1 = new Box(10, 20, 30);
+            Box box2 = new Box(25, 32, 15);
+
+            Console.WriteLine("Volume of {0} is :{1}", box1, box1.volume);
+            Console.WriteLine("Volume of {0} is :{1}", box2, box2.volume);
+            Console.WriteLine("Volume after adding boxes:{0}", box1 + box2);
+
+        }
+
+    }
+}
+
+**output **
+![image](https://user-images.githubusercontent.com/98141713/152300402-c9058078-be72-4302-98d5-c4159b057512.png)
+
+
