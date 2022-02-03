@@ -216,3 +216,35 @@ namespace Exercises
 ** output **
 ![image](https://user-images.githubusercontent.com/98141713/152288873-394a3d82-412c-4e12-b223-bb3648d18a41.png)
 
+
+** C3 program to create a Gray code **
+
+using System;
+namespace Exercises
+{
+    class GrayCode
+    {
+        static int getGray(int n)
+        {
+            return n^(n>>1);
+
+        }
+        static void Main (string[]args)
+        {
+            int inputNum,GrayNum;
+            Console.Write("\n Enter Decimal no:");
+            inputNum = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\n Binary equivalent of {0} :{1} " ,inputNum,
+                Convert.ToString(inputNum,2));
+
+            GrayNum=getGray(inputNum);
+            Console.WriteLine("\n Binary equivalent of {0} :{1} ", inputNum,
+               Convert.ToString(GrayNum, 2));
+        }
+
+
+    }
+}
+** output **
+![image](https://user-images.githubusercontent.com/98141713/152290932-fdff9ca7-0b2b-4f13-9c43-31375a94caae.png)
