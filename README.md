@@ -380,7 +380,8 @@ namespace Exercises
     }
 }
 ** out put**
-![image](https://user-images.githubusercontent.com/98141713/152476843-f7d9a1ba-68f2-4e69-b595-6fc0822a4e66.png)
+![image](https://user-images.githubusercontent.com/98141713/152477756-bfb2a38f-4b5f-46fe-aab6-142c1b47fffe.png)
+
 
 ** Generate register number of student using static constructor **
 using System;
