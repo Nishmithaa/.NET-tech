@@ -471,3 +471,58 @@ namespace Exercises
 ** Out put **
 ![image](https://user-images.githubusercontent.com/98141713/152479926-933fe057-3f45-4bd4-9b93-96ad432b12a3.png)
 
+** Sum of Diagonal matrix**
+using System;
+namespace Exercises
+{
+    class SumOfDiagonals
+    {
+        static void Main(string[]args)
+        {
+            int MaxRow, MaxCol, sum = 0;
+            int[,] Matrix;
+
+            Console.WriteLine("\n------Sum of diagonal matrix--------\n");
+            Console.Write("\n Enter the number in rows:");
+            MaxRow = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n Enter the number of columns:");
+            MaxCol = Convert.ToInt32(Console.ReadLine());
+
+            if (MaxRow != MaxCol)
+            {
+                Console.WriteLine("\n The Dimensiond entered is not a square matrix.");
+                Console.WriteLine("\n Exiting the program");
+                return;
+            }
+            Matrix = new int[MaxRow, MaxCol];
+            for (int i = 0; i < MaxRow; i++)
+            {
+                for (int j = 0; j < MaxCol; j++)
+                {
+                    Console.Write("\n Enter the ({0},{1}) th element of the the matrix :", (i + 1), (j + 1));
+                    Matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("\n the entered matrix is:");
+            for (int i = 0; i < MaxRow; i++)
+            {
+                for (int j = 0; j < MaxCol; j++)
+                {
+                    Console.Write(" " + Matrix[i, j]);
+                    if (i == j)
+                    {
+                        sum += Matrix[i, j];
+
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("\n The sum of diagonal is" + sum);
+
+        }
+
+    }
+}
+
+**Output**
+![image](https://user-images.githubusercontent.com/98141713/152483238-862f1ab9-46fd-4255-bd01-8576999b45f9.png)
