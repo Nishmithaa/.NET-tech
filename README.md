@@ -525,4 +525,4 @@ namespace Exercises
 }
 
 **Output**
-![image](https://user-images.githubusercontent.com/98141713/152483238-862f1ab9-46fd-4255-bd01-8576999b45f9.png)
+![image](https://user-images.githubusercontent.com/98141713/152483570-2b18e10c-a709-402f-a4d8-316f7ca19e60.png)
