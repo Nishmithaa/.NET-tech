@@ -978,45 +978,46 @@ namespace Exercises<br>
 
                     case 3:<br>
 
-                        Console.Write("\n Enter the file name to read the content:\n");
-                        fileName = Console.ReadLine();
-                        if (File.Exists(fileName))
-                        {
-                            using (StreamReader sr = File.OpenText(fileName))
-                            {
-                                string s = "";
-                                Console.WriteLine("Here is the content of the fileL:");
-                                while((s=sr.ReadLine())!=null)
-                                {
-                                    Console.WriteLine(s);
+                        Console.Write("\n Enter the file name to read the content:\n");<br><br>
+                       
+                        fileName = Console.ReadLine();<br>
+                        if (File.Exists(fileName))<br>
+                        {<br>
+                            using (StreamReader sr = File.OpenText(fileName))<br>
+                            {<br>
+                                string s = "";<br>
+                                Console.WriteLine("Here is the content of the fileL:");<br>
+                                while((s=sr.ReadLine())!=null)<br>
+                                {<br>
+                                    Console.WriteLine(s);<br>
 
-                                }
-                                Console.WriteLine("");
+                                }<br>
+                                Console.WriteLine("");<br>
 
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("File does not exists");
-                        }
-                        break;
-                    case 4:
-                        Console.WriteLine("\n Exiting.....");
-                        return;
+                            }<br>
+                        }<br>
+                        else<br>
+                        {<br>
+                            Console.WriteLine("File does not exists");<br>
+                        }<br>
+                        break;<br>
+                    case 4:<br>
+                        Console.WriteLine("\n Exiting.....");<br>
+                        return;<br>
 
-                    default:
-                        Console.WriteLine("\n Invalid Choice");
-                        break;
+                    default:<br>
+                        Console.WriteLine("\n Invalid Choice");<br>
+                        break;<br>
 
-                }
+                }<br>
 
-            }
-        }
-    }
-}
-** Output**
+            }<br>
+        }<br>
+    }<br>
+}<br>
+** Output**<br>
 
 
-![image](https://user-images.githubusercontent.com/98141713/152488263-e6a61ca3-5d78-46e1-ac3a-b74f246a9739.png)
-![image](https://user-images.githubusercontent.com/98141713/152488296-32ea9805-2364-40be-bd56-393d0c401056.png)
+![image](https://user-images.githubusercontent.com/98141713/152488263-e6a61ca3-5d78-46e1-ac3a-b74f246a9739.png)<br>
+![image](https://user-images.githubusercontent.com/98141713/152488296-32ea9805-2364-40be-bd56-393d0c401056.png)<br>
 
