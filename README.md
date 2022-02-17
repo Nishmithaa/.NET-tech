@@ -1134,3 +1134,41 @@ new Fraction(34,7)
 **Output**
 ![image](https://user-images.githubusercontent.com/98141713/154419378-72aa804c-184c-4bbf-b538-5f053bbf1a5b.png)
 
+**Create thread pools**
+using System;
+using System.Threading;
+namespace Exercises
+{
+    class ThreadPoolProg
+    {
+        public void ThreadFun1(object obj)
+        {
+            int loop = 0;
+            for (loop = 0; loop <= 4; loop++)
+            {
+                Console.WriteLine("Thread1 is executing");
+            }
+        }
+        public void ThreadFun2(object obj)
+        {
+            int loop = 0;
+            for (loop = 0; loop <= 4; loop++)
+            {
+                Console.WriteLine("Thread2 is executing");
+            }
+        }
+        public static void Main()
+        {
+            ThreadPoolProg TP = new ThreadPoolProg();
+            for (int i = 0; i < 2; i++)
+            {
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));
+            }
+            Console.ReadKey();
+        }
+    }
+}
+**Output**
+![image](https://user-images.githubusercontent.com/98141713/154424316-7d0bfec6-0978-4595-96ab-f402683ad75b.png)
+
