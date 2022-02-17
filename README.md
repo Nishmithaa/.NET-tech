@@ -1,5 +1,5 @@
  ****List Of .NET programmes****<br>
-**1.Binary triangle**<br>
+**1. Program to print Binary triangle**<br>
  using System;<br>
 
 namespace Exercises<br>
@@ -35,7 +35,7 @@ namespace Exercises<br>
 ![image](https://user-images.githubusercontent.com/98141713/150478977-e363ec57-9691-46e9-8c05-8a958e1f309f.png)
 
 
-** Amicable number**
+**Program to  check the entered number is Amicable number or not**
 
 using System;<br>
 
@@ -97,7 +97,7 @@ using System;<br>
 ![image](https://user-images.githubusercontent.com/98141713/150485440-5b009ec1-5fcf-41f1-9bd4-ca6567433528.png)<br>
 
 
-**  c# program to illustrate the multilrvel inheritence with virtual method **
+**c# program to illustrate the multilrvel inheritence with virtual method **
 using System;<br>
 
 namespace Exercises<br>
@@ -381,7 +381,7 @@ namespace Exercises<br>
 
 
 
-**6.Delegates **
+**Program to implement the principlles of Delegates **
 
 using System;<br>
 
@@ -465,7 +465,7 @@ namespace Exercises<br>
 ![image](https://user-images.githubusercontent.com/98141713/152299966-d3fc2e0e-a61a-484d-b050-033161f5f30f.png)
 
 
-**%.Boxes **
+**Calaculate the volume of 2 Boxes and find the resultant volume  after adding the volume **
 using System;<br>
 
 namespace Exercises<br>
@@ -557,7 +557,7 @@ namespace Exercises<br>
 ![image](https://user-images.githubusercontent.com/98141713/152300402-c9058078-be72-4302-98d5-c4159b057512.png)
 
 
-** Freaquency of the word  **<br>
+**Program to check Freaquency of the word 'is' **<br>
 
 using System;<br>
 
@@ -617,7 +617,7 @@ namespace Exercises<br>
 ![image](https://user-images.githubusercontent.com/98141713/152477756-bfb2a38f-4b5f-46fe-aab6-142c1b47fffe.png)
 
 
-** Generate register number of student using static constructor **<br>
+**Generate register number of student using static constructor **<br>
 
 using System;<br>
 
@@ -679,7 +679,7 @@ namespace Exercises<br>
 ![image](https://user-images.githubusercontent.com/98141713/152477327-19876410-1ab1-436e-b6ab-48d144e92c13.png)
 ![image](https://user-images.githubusercontent.com/98141713/152477394-eac76e2a-c9af-439b-beff-db5ab7dff7ad.png)
 
-** 2D ,jagged array Allocation **<br>
+**program to bench mark 2D ,jagged array Allocation**<br>
 using System;<br>
 
 
@@ -780,7 +780,7 @@ namespace Exercises<br>
 
 ![image](https://user-images.githubusercontent.com/98141713/152479926-933fe057-3f45-4bd4-9b93-96ad432b12a3.png)
 
-** Sum of Diagonal matrix**<br>
+**Program to find the Sum of Diagonal matrix**<br>
 
 using System;<br>
 
@@ -885,7 +885,7 @@ namespace Exercises<br>
 ![image](https://user-images.githubusercontent.com/98141713/152483570-2b18e10c-a709-402f-a4d8-316f7ca19e60.png)
 
 
-** Create ,check the existence and read the contemts of the files **<br>
+**Create ,check the existence and read the contemts of the files **<br>
 
 using System;<br>
 
@@ -1022,7 +1022,7 @@ namespace Exercises<br>
 ![image](https://user-images.githubusercontent.com/98141713/152488296-32ea9805-2364-40be-bd56-393d0c401056.png)<br>
 
 
-**File comparision**
+**Program to comparision of 2 files**
 
 using System;<br>
 using System.IO;<br>
@@ -1075,7 +1075,7 @@ namespace Exercises<br>
    ![image](https://user-images.githubusercontent.com/98141713/154416193-164b7553-efde-416d-8941-0251c40a6d7a.png)<br>
    
 
-**Implement Icomprable interface**<br>
+**program to Implement Icomprable interface**<br>
 using System;<br>
 namespace Exercises<br>
 {<br>
@@ -1137,7 +1137,7 @@ new Fraction(34,7)<br>
 ![image](https://user-images.githubusercontent.com/98141713/154419378-72aa804c-184c-4bbf-b538-5f053bbf1a5b.png)<br>
 
 
-**Create thread pools**<br>
+**Program to Create thread pools**<br>
 using System;<br>
 using System.Threading;<br>
 namespace Exercises<br>
@@ -1175,7 +1175,7 @@ namespace Exercises<br>
 **Output**<br>
 ![image](https://user-images.githubusercontent.com/98141713/154424316-7d0bfec6-0978-4595-96ab-f402683ad75b.png)<br>
 
-**Demonstrate handling error using try catch method**<br>
+**Program to Demonstrate handling error using try catch method**<br>
 using System;<br>
 namespace Exercises<br>
 {<br>
