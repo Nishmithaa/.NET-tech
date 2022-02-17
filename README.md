@@ -1024,151 +1024,202 @@ namespace Exercises<br>
 
 **File comparision**
 
-using System;
-using System.IO;
-namespace Exercises
-{
-    class FileRead
-    {
-        public static void Main()
-        {
-            string file1;
-            string file2;
+using System;<br>
+using System.IO;<br>
+namespace Exercises<br>
+{<br>
+    class FileRead<br>
+    {<br>
+        public static void Main()<br>
+        {<br>
+            string file1;<br>
+            string file2;<br>
 
-            Console.Write("Enter the first file path:");
-            file1 = Console.ReadLine();
+            Console.Write("Enter the first file path:");<br>
+            file1 = Console.ReadLine();<br>
 
-            Console.Write("Enter the second path:");
-            file2 = Console.ReadLine();
+            Console.Write("Enter the second path:");<br>
+            file2 = Console.ReadLine();<br>
 
-            if (!File.Exists(file1))
-            {
-                Console.WriteLine("First file does not exist");
+            if (!File.Exists(file1))<br>
+            {<br>
+                Console.WriteLine("First file does not exist");<br>
 
-            }
-            if (!File.Exists(file2))
-            {
-                Console.WriteLine("Second file does not exist");
+            }<br>
+            if (!File.Exists(file2))<br>
+            {<br>
+                Console.WriteLine("Second file does not exist");<br>
 
-            }
+            }<br>
 
-            else if (File.ReadAllText(file1) == File.ReadAllText(file2))
-            { 
+            else if (File.ReadAllText(file1) == File.ReadAllText(file2))<br>
+            { <br>
 
-                Console.WriteLine("Both files contain the same content");
-            }
-            else
-            {
-                Console.WriteLine("Contents of the files are not same");
+                Console.WriteLine("Both files contain the same content");<br>
+            }<br>
+            
+           
+            else<br>
+            {<br>
+                Console.WriteLine("Contents of the files are not same");<br>
 
-            }
+            }<br>
 
 
-        }
-    }
-}
+        }<br>
+    }<br>
+}<br>
 
    **output**
-   ![image](https://user-images.githubusercontent.com/98141713/154415883-cd023d25-a835-4ebc-9bfa-00b0c56861c3.png)
-   ![image](https://user-images.githubusercontent.com/98141713/154416193-164b7553-efde-416d-8941-0251c40a6d7a.png)
+   ![image](https://user-images.githubusercontent.com/98141713/154415883-cd023d25-a835-4ebc-9bfa-00b0c56861c3.png)<br>
+   ![image](https://user-images.githubusercontent.com/98141713/154416193-164b7553-efde-416d-8941-0251c40a6d7a.png)<br>
    
 
-**Implement Icomprable interface**
-using System;
-namespace Exercises
-{
-    class Fraction : IComparable
-    {
-        int z, n;
-        public Fraction(int z, int n)
-        {
-            this.z = z;
-            this.n = n;
-        }
-        public static Fraction operator +(Fraction a, Fraction b)
-        {
-            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);
-        }
-        public static Fraction operator *(Fraction a, Fraction b)
-        {
-            return new Fraction(a.z * b.z, a.n * b.n);
-        }
-        public int CompareTo(object obj)
-        {
-            Fraction f = (Fraction)obj;
-            if ((float)z / n < (float)f.z / f.n)
-                return -1;
-            else if ((float)z / n > (float)f.z / f.n)
-                return 1;
-            else
-                return 0;
-        }
-        public override string ToString()
-        {
-            return z + "/" + n;
-        }
-    }
-    class ICompInterface
-    {
-        public static void Main()
-        {
+**Implement Icomprable interface**<br>
+using System;<br>
+namespace Exercises<br>
+{<br>
+    class Fraction : IComparable<br>
+    {<br>
+        int z, n;<br>
+        public Fraction(int z, int n)<br>
+        {<br>
+            this.z = z;<br>
+            this.n = n;<br>
+        }<br>
+        public static Fraction operator +(Fraction a, Fraction b)<br>
+        {<br>
+            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);<br>
+        }<br>
+        public static Fraction operator *(Fraction a, Fraction b)<br>
+        {<br>
+            return new Fraction(a.z * b.z, a.n * b.n);<br>
+        }<br>
+        public int CompareTo(object obj)<br>
+        {<br>
+            Fraction f = (Fraction)obj;<br>
+            if ((float)z / n < (float)f.z / f.n)<br>
+                return -1;<br>
+            else if ((float)z / n > (float)f.z / f.n)<br>
+                return 1;<br>
+            else<br>
+                return 0;<br>
+        }<br>
+        public override string ToString()<br>
+        {<br>
+            return z + "/" + n;<br>
+        }<br>
+    }<br>
+    class ICompInterface<br>
+    {<br>
+        public static void Main()<br>
+        {<br>
 
-            Fraction[] a = {
-new Fraction(5,2),
-new Fraction(29,6),
-new Fraction(4,5),
-new Fraction(10,8),
-new Fraction(34,7)
-};
-            Array.Sort(a);
-            Console.WriteLine("Implementing the IComparable Interface in " + "Displaying Fractions : ");
-            foreach (Fraction f in a)
-            {
-                Console.WriteLine(f + " ");
-            }
-            Console.WriteLine();
-            Console.ReadLine();
-        }
-    }
-}
-**Output**
-![image](https://user-images.githubusercontent.com/98141713/154419378-72aa804c-184c-4bbf-b538-5f053bbf1a5b.png)
+            Fraction[] a = {<br>
+new Fraction(5,2),<br>
+new Fraction(29,6),<br>
+new Fraction(4,5),<br>
+new Fraction(10,8),<br>
+new Fraction(34,7)<br>
+};<br>
+            Array.Sort(a);<br>
+            Console.WriteLine("Implementing the IComparable Interface in " + "Displaying Fractions : ");<br>
+            foreach (Fraction f in a)<br>
+            {<br>
+                Console.WriteLine(f + " ");<br>
+            }<br>
+            Console.WriteLine();<br>
+            Console.ReadLine();<br>
+        }<br>
+    }<br>
+}<br>
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/154419378-72aa804c-184c-4bbf-b538-5f053bbf1a5b.png)<br>
 
-**Create thread pools**
-using System;
-using System.Threading;
-namespace Exercises
-{
-    class ThreadPoolProg
-    {
-        public void ThreadFun1(object obj)
-        {
-            int loop = 0;
-            for (loop = 0; loop <= 4; loop++)
-            {
-                Console.WriteLine("Thread1 is executing");
-            }
-        }
-        public void ThreadFun2(object obj)
-        {
-            int loop = 0;
-            for (loop = 0; loop <= 4; loop++)
-            {
-                Console.WriteLine("Thread2 is executing");
-            }
-        }
-        public static void Main()
-        {
-            ThreadPoolProg TP = new ThreadPoolProg();
-            for (int i = 0; i < 2; i++)
-            {
-                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));
-                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));
-            }
-            Console.ReadKey();
-        }
-    }
-}
-**Output**
-![image](https://user-images.githubusercontent.com/98141713/154424316-7d0bfec6-0978-4595-96ab-f402683ad75b.png)
 
+**Create thread pools**<br>
+using System;<br>
+using System.Threading;<br>
+namespace Exercises<br>
+{<br>
+    class ThreadPoolProg<br>
+    {<br>
+        public void ThreadFun1(object obj)<br>
+        {<br>
+            int loop = 0;<br>
+            for (loop = 0; loop <= 4; loop++)<br>
+            {<br>
+                Console.WriteLine("Thread1 is executing");<br>
+            }<br>
+        }<br>
+        public void ThreadFun2(object obj)<br>
+        {<br>
+            int loop = 0;<br>
+            for (loop = 0; loop <= 4; loop++)<br>
+            {<br>
+                Console.WriteLine("Thread2 is executing");<br>
+            }<br>
+        }<br>
+        public static void Main()<br>
+        {<br>
+            ThreadPoolProg TP = new ThreadPoolProg();<br>
+            for (int i = 0; i < 2; i++)<br>
+            {<br>
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));<br>
+                ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));<br>
+            }<br>
+            Console.ReadKey();<br>
+        }<br>
+    }<br>
+}<br>
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/154424316-7d0bfec6-0978-4595-96ab-f402683ad75b.png)<br>
+
+**Demonstrate handling error using try catch method**<br>
+using System;<br>
+namespace Exercises<br>
+{<br>
+    class ExceptionHandling<br>
+    {<br>
+        static void Main(string[] args)<br>
+        {<br>
+            Age a = new Age();<br>
+            try<br>
+            {<br>
+                a.displayAge();<br>
+            }<br>
+            catch (AgeIsNegativeException e)<br>
+            {<br>
+                Console.WriteLine("AgeIsNegativeException: {0}", e.Message);<br>
+            }<br>
+            finally<br>
+            {<br>
+                Console.WriteLine("Execution of Finally block is done.");<br>
+            }<br>
+        }<br>
+    }<br>
+}<br>
+public class AgeIsNegativeException : Exception<br>
+{<br>
+    public AgeIsNegativeException(string message) : base(message)<br>
+    {<br>
+    }<br>
+}<br>
+public class Age<br>
+{<br>
+    int age = -5;<br>
+    public void displayAge()<br>
+    {<br>
+        if (age < 0)<br>
+        {<br>
+            throw (new AgeIsNegativeException("Age cannot be negative"));<br>
+        }<br>
+        else<br>
+        {<br>
+            Console.WriteLine("Age is: {0}", age);<br>
+        }<br>
+    }<br>
+}<br>
+<br>
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/154424933-596032b0-97f1-448f-a382-1ba9b1d70ea9.png)<br>
