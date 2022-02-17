@@ -318,13 +318,13 @@ namespace Exercises<br>
         }<br>
 
 
-** output **<br>
+**output**<br>
 
 ![image](https://user-images.githubusercontent.com/98141713/152288873-394a3d82-412c-4e12-b223-bb3648d18a41.png)<br>
 
 
 
-** C3 program to create a Gray code **
+**C3 program to create a Gray code **
 
 using System;<br>
 
@@ -381,7 +381,7 @@ namespace Exercises<br>
 
 
 
-**6. Delegates **
+**6.Delegates **
 
 using System;<br>
 
@@ -776,7 +776,7 @@ namespace Exercises<br>
 }<br>
 
 
-** Out put **<br>
+**Out put**<br>
 
 ![image](https://user-images.githubusercontent.com/98141713/152479926-933fe057-3f45-4bd4-9b93-96ad432b12a3.png)
 
@@ -1015,7 +1015,7 @@ namespace Exercises<br>
         }<br>
     }<br>
 }<br>
-** Output**<br>
+**Output**<br>
 
 
 ![image](https://user-images.githubusercontent.com/98141713/152488263-e6a61ca3-5d78-46e1-ac3a-b74f246a9739.png)<br>
@@ -1070,7 +1070,7 @@ namespace Exercises<br>
     }<br>
 }<br>
 
-   **output**
+   **output**<br>
    ![image](https://user-images.githubusercontent.com/98141713/154415883-cd023d25-a835-4ebc-9bfa-00b0c56861c3.png)<br>
    ![image](https://user-images.githubusercontent.com/98141713/154416193-164b7553-efde-416d-8941-0251c40a6d7a.png)<br>
    
