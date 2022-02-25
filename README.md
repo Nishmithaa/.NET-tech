@@ -1304,6 +1304,27 @@ public class PalindromeExample
 ![image](https://user-images.githubusercontent.com/98141713/155661626-d0438f5e-ea44-49a0-ac02-b503253a037b.png)
 ![image](https://user-images.githubusercontent.com/98141713/155661756-d96a69ee-f912-4ab1-ae5d-ea00f975d43d.png)
 
+**C# program to find the factorial of the number**
+
+using System;
+public class FactorialExample
+{
+    public static void Main(string[] args)
+    {
+        int i, fact = 1, number;
+        Console.Write("Enter any Number: ");
+        number = int.Parse(Console.ReadLine());
+        for (i = 1; i <= number; i++)
+        {
+            fact = fact * i;
+        }
+        Console.Write("Factorial of " + number + " is: " + fact);
+    }
+}
+
+**Output**
+![image](https://user-images.githubusercontent.com/98141713/155662479-c356c2e3-f20f-45ca-a7be-88306b2b0e90.png)
+
 
 
 
