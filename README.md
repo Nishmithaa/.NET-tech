@@ -1353,4 +1353,25 @@ public class ArmstrongExample<br>
 ![image](https://user-images.githubusercontent.com/98141713/155665893-e0365ce6-0844-4227-90b9-55f023170d69.png)<br>
 ![image](https://user-images.githubusercontent.com/98141713/155665984-5cc2ffd2-bf88-4722-a31a-835727e4d048.png)<br>
 
+**C# program to check the sum of the numbers**<br>
 
+using System;<br>
+public class SumExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, sum = 0, m;<br>
+        Console.Write("Enter a number: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        while (n > 0)<br>
+        {<br>
+            m = n % 10;<br>
+            sum = sum + m;<br>
+            n = n / 10;<br>
+        }<br>
+        Console.Write("Sum is= " + sum);<br>
+    }<br>
+}<br>
+
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/155667382-eb0a3d88-88ff-4613-85dc-8fda7124a346.png)<br>
