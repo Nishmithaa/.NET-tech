@@ -1246,3 +1246,34 @@ public class FibonacciExample
 }
 **Output**
 ![image](https://user-images.githubusercontent.com/98141713/155659583-553702b5-9b78-4f85-9050-8aaeff954ae7.png)
+
+**C# program to check whether entered number is prime or not**
+using System;
+public class PrimeNumberExample
+{
+    public static void Main(string[] args)
+    {
+        int n, i, m = 0, flag = 0;
+        Console.Write("Enter the Number to check Prime: ");
+        n = int.Parse(Console.ReadLine());
+        m = n / 2;
+        for (i = 2; i <= m; i++)
+        {
+            if (n % i == 0)
+            {
+                Console.Write("Number is not Prime.");
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0)
+            Console.Write("Number is Prime.");
+    }
+}
+
+**Output**
+![image](https://user-images.githubusercontent.com/98141713/155660567-d6e5c053-4a8e-4a4f-8a20-5bffba3bde58.png)
+![image](https://user-images.githubusercontent.com/98141713/155660665-e448aef8-82f2-4252-84de-7905bc161e05.png)
+
+
+
