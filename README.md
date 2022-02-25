@@ -1375,3 +1375,28 @@ public class SumExample<br>
 
 **Output**<br>
 ![image](https://user-images.githubusercontent.com/98141713/155667382-eb0a3d88-88ff-4613-85dc-8fda7124a346.png)<br>
+
+
+**C# program to reverese a number**<br>
+
+using System;<br>
+public class ReverseExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, reverse = 0, rem;<br>
+        Console.Write("Enter a number: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        while (n != 0)<br>
+        {<br>
+            rem = n % 10;<br>
+            reverse = reverse * 10 + rem;<br>
+            n /= 10;<br>
+        }<br>
+        Console.Write("Reversed Number: " + reverse);<br>
+    }<br>
+}<br>
+
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/155668185-182d6c4a-f5c3-414d-befe-998c5e3a4b05.png)<br>
+
