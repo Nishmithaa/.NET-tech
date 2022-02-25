@@ -1225,106 +1225,132 @@ public class Age<br>
 ![image](https://user-images.githubusercontent.com/98141713/154424933-596032b0-97f1-448f-a382-1ba9b1d70ea9.png)<br>
 
 
-**C# program to print fibonacci number**
-using System;
-public class FibonacciExample
-{
+**C# program to print fibonacci number**<br>
+using System;<br>
+public class FibonacciExample<br>
+{<br>
     public static void Main(string[] args)
     {
-        int n1 = 0, n2 = 1, n3, i, number;
-        Console.Write("Enter the number of elements: ");
-        number = int.Parse(Console.ReadLine());
-        Console.Write(n1 + " " + n2 + " ");  
-        for (i = 2; i < number; ++i)    
-        {
-            n3 = n1 + n2;
-            Console.Write(n3 + " ");
-            n1 = n2;
-            n2 = n3;
-        }
-    }
-}
-**Output**
-![image](https://user-images.githubusercontent.com/98141713/155659583-553702b5-9b78-4f85-9050-8aaeff954ae7.png)
+        int n1 = 0, n2 = 1, n3, i, number;<br>
+        Console.Write("Enter the number of elements: ");<br>
+        number = int.Parse(Console.ReadLine());<br>
+        Console.Write(n1 + " " + n2 + " ");  <br>
+        for (i = 2; i < number; ++i)    <br>
+        {<br>
+            n3 = n1 + n2;<br>
+            Console.Write(n3 + " ");<br>
+            n1 = n2;<br>
+            n2 = n3;<br>
+        }<br>
+    }<br>
+}<br>
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/155659583-553702b5-9b78-4f85-9050-8aaeff954ae7.png)<br>
 
-**C# program to check whether entered number is prime or not**
-using System;
-public class PrimeNumberExample
-{
-    public static void Main(string[] args)
-    {
-        int n, i, m = 0, flag = 0;
-        Console.Write("Enter the Number to check Prime: ");
-        n = int.Parse(Console.ReadLine());
-        m = n / 2;
-        for (i = 2; i <= m; i++)
-        {
-            if (n % i == 0)
-            {
-                Console.Write("Number is not Prime.");
-                flag = 1;
-                break;
-            }
-        }
-        if (flag == 0)
-            Console.Write("Number is Prime.");
-    }
-}
+**C# program to check whether entered number is prime or not**<br>
+using System;<br>
+public class PrimeNumberExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, i, m = 0, flag = 0;<br>
+        Console.Write("Enter the Number to check Prime: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        m = n / 2;<br>
+        for (i = 2; i <= m; i++)<br>
+        {<br>
+            if (n % i == 0)<br>
+            {<br>
+                Console.Write("Not is not Prime.");<br>
+                flag = 1;<br>
+                break;<br>
+            }<br>
+        }<br>
+        if (flag == 0)<br>
+            Console.Write("Number is Prime.");<br>
+    }<br>
+}<br>
 
-**Output**
-![image](https://user-images.githubusercontent.com/98141713/155660567-d6e5c053-4a8e-4a4f-8a20-5bffba3bde58.png)
-![image](https://user-images.githubusercontent.com/98141713/155660665-e448aef8-82f2-4252-84de-7905bc161e05.png)
-
-
-**C# program to check whethe the enterede number is palindrome or not.**
-
-using System;
-public class PalindromeExample
-{
-    public static void Main(string[] args)
-    {
-        int n, r, sum = 0, temp;
-        Console.Write("Enter the Number: ");
-        n = int.Parse(Console.ReadLine());
-        temp = n;
-        while (n > 0)
-        {
-            r = n % 10;
-            sum = (sum * 10) + r;
-            n = n / 10;
-        }
-        if (temp == sum)
-            Console.Write("Number is Palindrome.");
-        else
-            Console.Write("Number is not Palindrome");
-    }
-}
-
-**Output**
-![image](https://user-images.githubusercontent.com/98141713/155661626-d0438f5e-ea44-49a0-ac02-b503253a037b.png)
-![image](https://user-images.githubusercontent.com/98141713/155661756-d96a69ee-f912-4ab1-ae5d-ea00f975d43d.png)
-
-**C# program to find the factorial of the number**
-
-using System;
-public class FactorialExample
-{
-    public static void Main(string[] args)
-    {
-        int i, fact = 1, number;
-        Console.Write("Enter any Number: ");
-        number = int.Parse(Console.ReadLine());
-        for (i = 1; i <= number; i++)
-        {
-            fact = fact * i;
-        }
-        Console.Write("Factorial of " + number + " is: " + fact);
-    }
-}
-
-**Output**
-![image](https://user-images.githubusercontent.com/98141713/155662479-c356c2e3-f20f-45ca-a7be-88306b2b0e90.png)
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/155660567-d6e5c053-4a8e-4a4f-8a20-5bffba3bde58.png)<br>
+![image](https://user-images.githubusercontent.com/98141713/155660665-e448aef8-82f2-4252-84de-7905bc161e05.png)<br>
 
 
+**C# program to check whethe the enterede number is palindrome or not.**<br><br>
+
+using System;<br>
+public class PalindromeExample<br>
+{<br><br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, r, sum = 0, temp;<br>
+        Console.Write("Enter the Number: ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        temp = n;<br>
+        while (n > 0)<br>
+        {<br>
+            r = n % 10;<br>
+            sum = (sum * 10) + r;<br>
+            n = n / 10;<br>
+        }<br>
+        if (temp == sum)<br>
+            Console.Write("Number is Palindrome.");<br>
+        else<br>
+            Console.Write("Number is not Palindrome");<br>
+    }<br>
+}<br>
+
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/155661626-d0438f5e-ea44-49a0-ac02-b503253a037b.png)<br>
+![image](https://user-images.githubusercontent.com/98141713/155661756-d96a69ee-f912-4ab1-ae5d-ea00f975d43d.png)<br>
+
+**C# program to find the factorial of the number**<br>
+
+using System;<br>
+public class FactorialExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int i, fact = 1, number;<br>
+        Console.Write("Enter any Number: ");<br>
+        number = int.Parse(Console.ReadLine());<br>
+        for (i = 1; i <= number; i++)<br>
+        {<br>
+            fact = fact * i;<br>
+        }<br>
+        Console.Write("Factorial of " + number + " is: " + fact);<br><br>
+    }<br>
+}<br>
+
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/155662479-c356c2e3-f20f-45ca-a7be-88306b2b0e90.png)<br>
+
+**C# program to check the armstrong number**<br>
+
+using System;<br>
+public class ArmstrongExample<br>
+{<br>
+    public static void Main(string[] args)<br>
+    {<br>
+        int n, r, sum = 0, temp;<br>
+        Console.Write("Enter the Number= ");<br>
+        n = int.Parse(Console.ReadLine());<br>
+        temp = n;<br>
+        while (n > 0)<br>
+        {<br>
+            r = n % 10;<br>
+            sum = sum + (r * r * r);<br>
+            n = n / 10;<br>
+        }<br>
+        if (temp == sum)<br>
+            Console.Write("Armstrong Number.");<br>
+        else<br>
+            Console.Write("Not Armstrong Number.");<br>
+    }<br>
+}<br>
+
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/155665893-e0365ce6-0844-4227-90b9-55f023170d69.png)<br>
+![image](https://user-images.githubusercontent.com/98141713/155665984-5cc2ffd2-bf88-4722-a31a-835727e4d048.png)<br>
 
 
