@@ -1229,8 +1229,8 @@ public class Age<br>
 using System;<br>
 public class FibonacciExample<br>
 {<br>
-    public static void Main(string[] args)
-    {
+    public static void Main(string[] args)<br>
+    {<br>
         int n1 = 0, n2 = 1, n3, i, number;<br>
         Console.Write("Enter the number of elements: ");<br>
         number = int.Parse(Console.ReadLine());<br>
@@ -1276,7 +1276,7 @@ public class PrimeNumberExample<br>
 ![image](https://user-images.githubusercontent.com/98141713/155660665-e448aef8-82f2-4252-84de-7905bc161e05.png)<br>
 
 
-**C# program to check whethe the enterede number is palindrome or not.**<br><br>
+**C# program to check whethe the entered number is palindrome or not.**<br><br>
 
 using System;<br>
 public class PalindromeExample<br>
