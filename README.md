@@ -1400,3 +1400,65 @@ public class ReverseExample<br>
 **Output**<br>
 ![image](https://user-images.githubusercontent.com/98141713/155668185-182d6c4a-f5c3-414d-befe-998c5e3a4b05.png)<br>
 
+**progress bar**
+using System;<br>
+using System.Collections.Generic;<br>
+using System.ComponentModel;<br>
+using System.Data;<br>
+using System.Drawing;<br>
+using System.Linq;<br>
+using System.Text;<br>
+using System.Threading;<br>
+using System.Windows.Forms;<br>
+
+namespace progress_bar<br>
+{<br>
+    public partial class Form1 : Form<br>
+    {<br>
+        public Form1()<br>
+        {<br>
+            InitializeComponent();<br>
+        }<br>
+
+       
+
+        private void Form1_Load(object sender, EventArgs e)<br>
+        {<br>
+            
+                backgroundWorker1.WorkerReportsProgress = true;<br>
+                backgroundWorker1.RunWorkerAsync();<br>
+
+        }<br>
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)<br>
+        {<br>
+            
+                for (int i = 1; i <= 100; i++)<br>
+                {<br>
+                    Thread.Sleep(50);<br>
+                    backgroundWorker1.ReportProgress(i);<br>
+                }<br>
+
+        }<br>
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)<br>
+        {<br>
+            {<br>
+                progressBar1.Value = e.ProgressPercentage;<br>
+                this.Text = "progress:" + e.ProgressPercentage.ToString() + "%";<br>
+
+            }<br>
+        }<br>
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)<br>
+        {<br>
+
+        }<br>
+
+       
+    }<br>
+}<br>
+
+
+**Output**<br>
+![image](https://user-images.githubusercontent.com/98141713/158751766-dbcd8540-1dbf-4f39-8833-6889c02e3389.png)<br>
