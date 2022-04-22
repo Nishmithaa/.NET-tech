@@ -1924,73 +1924,73 @@ namespace WindowsFormsApp10
                 lNodeImg = left.Draw();
                 lSize = lNodeImg.Size;
                 this.center = lSize.Width;
-                lCenter = left.center;
-            }
-            if (this.right != null)
-            {
-                rNodeImg = right.Draw();
-                rSize = rNodeImg.Size;
-                rCenter = right.center;
-            }
-            int maxHeight = (lSize.Height < rSize.Height) ? rSize.Height : lSize.Height;
-            if (maxHeight > 0) maxHeight += 35;
-            Size resultSize = new Size(lSize.Width + rSize.Width, nodeBg.Size.Height +
-maxHeight);
-            Bitmap result = new Bitmap(resultSize.Width, resultSize.Height);
+                lCenter = left.center;<br>
+            }<br>
+            if (this.right != null)<br>
+            {<br>
+                rNodeImg = right.Draw();<br>
+                rSize = rNodeImg.Size;<br>
+                rCenter = right.center;<br>
+            }<br>
+            int maxHeight = (lSize.Height < rSize.Height) ? rSize.Height : lSize.Height;<br>
+            if (maxHeight > 0) maxHeight += 35;<br>
+            Size resultSize = new Size(lSize.Width + rSize.Width, nodeBg.Size.Height +<br>
+maxHeight);<br>
+            Bitmap result = new Bitmap(resultSize.Width, resultSize.Height);<br>
 
-            Graphics g = Graphics.FromImage(result);
-            g.SmoothingMode = SmoothingMode.HighQuality;
-            g.FillRectangle(Brushes.White, new Rectangle(new Point(0, 0), resultSize));
-            g.DrawImage(nodeBg, lSize.Width - nodeBg.Width / 2, 0);
+            Graphics g = Graphics.FromImage(result);<br>
+            g.SmoothingMode = SmoothingMode.HighQuality;<br>
+            g.FillRectangle(Brushes.White, new Rectangle(new Point(0, 0), resultSize));<br>
+            g.DrawImage(nodeBg, lSize.Width - nodeBg.Width / 2, 0);<br>
 
-            string str = "" + value;
-            g.DrawString(str, font, Brushes.Black, lSize.Width - nodeBg.Width / 2 + 7,
-           nodeBg.Height / 2f - 12);
-            Pen pen = new Pen(Brushes.Black, 1.2f);
-            float x1 = center;
-            float y1 = nodeBg.Height;
-            float y2 = nodeBg.Height + 35;
-            float x2 = lCenter;
-            var h = Math.Abs(y2 - y1);
-            var w = Math.Abs(x2 - x1);
-            if (lNodeImg != null)
-            {
-                g.DrawImage(lNodeImg, 0, nodeBg.Size.Height + 35);
-                var points1 = new List<PointF>
- {
- new PointF(x1, y1),
- new PointF(x1 - w/6, y1 + h/3.5f),
- new PointF(x2 + w/6, y2 - h/3.5f),
- new PointF(x2, y2),
- };
-                g.DrawCurve(pen, points1.ToArray(), 0.5f);
-            }
-            if (rNodeImg != null)
-            {
-                g.DrawImage(rNodeImg, lSize.Width, nodeBg.Size.Height + 35);
-                x2 = rCenter + lSize.Width;
-                w = Math.Abs(x2 - x1);
-                var points = new List<PointF>
- {
- new PointF(x1, y1),
- new PointF(x1 + w/6, y1 + h/3.5f),
- new PointF(x2 - w/6, y2 - h/3.5f),
- new PointF(x2, y2)
- };
-                g.DrawCurve(pen, points.ToArray(), 0.5f);
-            }
-            return result;
-        }
-        public bool Exists(int value)
-        {
-            bool res = value == this.value;
-            if (!res && left != null)
-                res = left.Exists(value);
-            if (!res && right != null)
-                res = right.Exists(value);
-            return res;
-          }
-        }
-}
+            string str = "" + value;<br>
+            g.DrawString(str, font, Brushes.Black, lSize.Width - nodeBg.Width / 2 + 7,<br>
+           nodeBg.Height / 2f - 12);<br>
+            Pen pen = new Pen(Brushes.Black, 1.2f);<br>
+            float x1 = center;<br><br>
+            float y1 = nodeBg.Height;<br><br>
+            float y2 = nodeBg.Height + 35;<br><br>
+            float x2 = lCenter;<br><br>
+            var h = Math.Abs(y2 - y1);<br><br>
+            var w = Math.Abs(x2 - x1);<br><br>
+            if (lNodeImg != null)<br><br><br>
+            {<br>
+                g.DrawImage(lNodeImg, 0, nodeBg.Size.Height + 35);<br>
+                var points1 = new List<PointF><br>
+ {<br>
+ new PointF(x1, y1),<br>
+ new PointF(x1 - w/6, y1 + h/3.5f),<br>
+ new PointF(x2 + w/6, y2 - h/3.5f),<br>
+ new PointF(x2, y2),<br>
+ };<br>
+                g.DrawCurve(pen, points1.ToArray(), 0.5f);<br>
+            }<br>
+            if (rNodeImg != null)<br>
+            {<br>
+                g.DrawImage(rNodeImg, lSize.Width, nodeBg.Size.Height + 35);<br>
+                x2 = rCenter + lSize.Width;<br>
+                w = Math.Abs(x2 - x1);<br>
+                var points = new List<PointF><br>
+ {<br>
+ new PointF(x1, y1),<br>
+ new PointF(x1 + w/6, y1 + h/3.5f),<br>
+ new PointF(x2 - w/6, y2 - h/3.5f),<br>
+ new PointF(x2, y2)<br>
+ };<br>
+                g.DrawCurve(pen, points.ToArray(), 0.5f);<br>
+            }<br>
+            return result;<br>
+        }<br>
+        public bool Exists(int value)<br>
+        {<br>
+            bool res = value == this.value;<br>
+            if (!res && left != null)<br>
+                res = left.Exists(value);<br>
+            if (!res && right != null)<br>
+                res = right.Exists(value);<br>
+            return res;<br>
+          }<br>
+        }<br>
+}<br>
 **output**
 ![image](https://user-images.githubusercontent.com/98141713/160989845-f9a7ce54-de58-4b5c-9490-92bb6970d31a.png)
